@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author xuwenzhao
  * @date 2018-08-01
  */
-@FeignClient(value = "grpc-server")
+@FeignClient(value = "grpc-server", fallback = GreetingServiceRemoteHystric.class)
 public interface GreetingServiceRemote extends GreetingService {
     @RequestMapping(value = "/hello")
     Greeting hello(String name);
