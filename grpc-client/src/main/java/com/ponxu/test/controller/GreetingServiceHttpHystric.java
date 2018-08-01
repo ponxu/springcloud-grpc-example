@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  * @date 2018-08-01
  */
 @Component
-public class GreetingServiceRemoteHystric implements GreetingServiceRemote {
+public class GreetingServiceHttpHystric implements GreetingServiceHttp {
     @Override
     public Greeting hello(String name) {
         return new Greeting(0, "hystric," + name);

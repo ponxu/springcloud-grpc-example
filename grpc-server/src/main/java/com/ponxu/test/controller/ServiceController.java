@@ -17,6 +17,7 @@ public class ServiceController implements GreetingService {
 
     @RequestMapping("/hello")
     public Greeting hello(String name) {
+        System.out.println(name);
         return new Greeting(port, "hello, " + name);
     }
 }
