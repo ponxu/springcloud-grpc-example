@@ -7,12 +7,12 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- * @author xuwenzhao
+ * @author ponxu
  * @date 2018-08-01
  */
 @EnableFeignClients
 @EnableDiscoveryClient
-//@EnableEurekaClient
+@EnableEurekaClient
 @SpringBootApplication
 public class GrpcClientApplication {
     public static void main(String[] args) {

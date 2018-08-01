@@ -6,7 +6,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * @author xuwenzhao
+ * @author ponxu
  * @date 2018-08-01
  */
 @FeignClient(value = "grpc-server", fallback = GreetingServiceRemoteHystric.class)

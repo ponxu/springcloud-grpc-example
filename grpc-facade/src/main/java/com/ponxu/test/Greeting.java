@@ -1,7 +1,7 @@
 package com.ponxu.test;
 
 /**
- * @author xuwenzhao
+ * @author ponxu
  * @date 2018-08-01
  */
 public class Greeting {

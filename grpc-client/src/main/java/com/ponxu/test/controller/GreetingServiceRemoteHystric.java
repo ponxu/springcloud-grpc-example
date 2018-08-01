@@ -4,7 +4,7 @@ import com.ponxu.test.Greeting;
 import org.springframework.stereotype.Component;
 
 /**
- * @author xuwenzhao
+ * @author ponxu
  * @date 2018-08-01
  */
 @Component
