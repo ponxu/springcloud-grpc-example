@@ -1,5 +1,6 @@
 package com.ponxu.test.controller;
 
+import com.fasterxml.jackson.databind.JsonSerializable;
 import com.netflix.appinfo.InstanceInfo;
 import com.netflix.discovery.EurekaClient;
 import com.ponxu.test.Greeting;
@@ -23,6 +24,10 @@ public class GreetingServiceGRpc implements GreetingService {
 
     public Greeting hello(String name) {
         final InstanceInfo instanceInfo = client.getNextServerFromEureka("grpc-server", false);
+        System.out.println(instanceInfo.getAppName());
+        System.out.println(instanceInfo.getIPAddr());
+        System.out.println(instanceInfo.getPort());
+
         final ManagedChannel channel = ManagedChannelBuilder.forAddress(instanceInfo.getIPAddr(), instanceInfo.getPort())
                 .usePlaintext()
                 .build();
